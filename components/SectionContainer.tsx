@@ -1,16 +1,17 @@
 "use client";
 
-import { ReactNode } from "react";
 
 export default function SectionContainer({
+  id,
   title,
   children,
 }: {
+  id: string;
   title: string;
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
-    <section className="my-10 mx-5 md:mx-20 lg:mx-40">
+    <section id={id} className="mb-10 md:mb-40 mx-5 md:mx-20 lg:mx-40 ">
       <h2
         className="inline-block
   text-2xl
@@ -18,7 +19,7 @@ export default function SectionContainer({
   font-roboto
   text-tertiary
   border-b-4 border-pink-500
-  mt-0
+  mb-2 md:mb-20
   pb-2"
       >
         {title}

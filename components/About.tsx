@@ -5,8 +5,8 @@ import SectionContainer from "./SectionContainer";
 
 export default function About() {
   return (
-    <SectionContainer title="About Me">
-      <div id="about" className="mt-6 md:mt-10">
+    <SectionContainer id="about" title="About Me">
+      <div className="mt-6 md:mt-10">
         <div className="flex flex-col md:flex-row">
           {/* Intro */}
           <h3 className="text-xl md:text-3xl font-bold md:leading-[38px] text-secondary m-4 md:m-auto md:mr-10">

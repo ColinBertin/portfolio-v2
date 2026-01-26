@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Banner() {
   return (
-    <header className="h-screen w-screen flex flex-col md:flex-row-reverse justify-center items-center pt-24 md:pt-0 md:px-8 md:gap-12">
+    <header className="h-screen w-screen flex flex-col md:flex-row-reverse justify-center items-center pt-24 md:pt-0 md:px-8 md:gap-12 mb-10">
       <Image
         className="rounded-full shadow-[3px_3px_23px_3px_rgba(65,63,63,0.3)] w-[240px] h-[240px]
     sm:w-[360px] sm:h-[360px]"
