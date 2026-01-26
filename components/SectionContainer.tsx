@@ -13,7 +13,8 @@ export default function SectionContainer({
     <section className="my-10 mx-5 md:mx-20 lg:mx-40">
       <h2
         className="inline-block
-  text-[32px]
+  text-2xl
+  md:text-3xl
   font-roboto
   text-tertiary
   border-b-4 border-pink-500

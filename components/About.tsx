@@ -6,15 +6,15 @@ import SectionContainer from "./SectionContainer";
 export default function About() {
   return (
     <SectionContainer title="About Me">
-      <div id="about" className="mt-10">
+      <div id="about" className="mt-6 md:mt-10">
         <div className="flex flex-col md:flex-row">
           {/* Intro */}
-          <h3 className="text-2xl md:text-4xl font-bold leading-[38px] text-secondary mb-0 md:m-auto">
+          <h3 className="text-xl md:text-3xl font-bold md:leading-[38px] text-secondary m-4 md:m-auto md:mr-10">
             Hi! I&apos;m Colin, nice to meet you. Please take a look around.
           </h3>
 
           {/* Main text */}
-          <p className="text-tertiary md:max-w-[60%] m-4 md:m-0">
+          <p className="text-tertiary md:max-w-[60%] m-4 md:m-0 text-lg">
             I&apos;m a web developer based in Yokohama, Japan, with a passion
             for crafting user-centric web experiences. Since 2018, I&apos;ve
             honed my skills in building dynamic and responsive websites and
