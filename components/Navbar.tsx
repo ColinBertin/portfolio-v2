@@ -28,7 +28,7 @@ export default function Navbar() {
   }, [navOpen]);
 
   return (
-    <div className="sticky top-0 z-50 h-14 flex justify-between items-center py-1 px-4 bg-bg">
+    <div className="fixed w-screen top-0 z-50 h-14 flex justify-between items-center py-1 px-4 bg-bg">
       <Image className="logo" src={Logo} width={50} height={50} alt="logo" />
       {/* Hamburger */}
       <ToggleButton

@@ -25,7 +25,7 @@ export default function NavList({
     origin-top transition-transform duration-500
     fixed top-14 left-0 z-40 w-full h-[calc(100vh-3.5rem)]
     ${isOpen ? "scale-y-100" : "scale-y-0"}
-    md:static md:flex-row md:h-auto md:w-auto md:scale-y-100 md:flex
+    md:static md:flex-row md:h-auto md:w-auto md:scale-y-100 md:flex mr-4
   `}
     >
       {navbarItems.map((item) => (

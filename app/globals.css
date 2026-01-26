@@ -78,24 +78,6 @@ a {
   cursor: pointer;
 }
 
-h1,
-h2 {
-  /* color: var(--light-thirdary); */
-  font-family: "Roboto", sans-serif;
-}
-
-/* h1 {
-  font-size: 40px;
-} */
-
-h2 {
-  font-size: 32px;
-  display: inline-block;
-  /* border-bottom: 4px solid var(--pink); */
-  margin-top: 0;
-  padding-bottom: 8px;
-}
-
 p {
   font-size: 16px;
   line-height: 24px;

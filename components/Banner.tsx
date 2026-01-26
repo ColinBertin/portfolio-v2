@@ -7,22 +7,22 @@ import Link from "next/link";
 
 export default function Banner() {
   return (
-    <div className="md:px-8 md:py-10 h-screen max-w-screen-xl flex flex-col md:flex-row-reverse justify-around items-center md:my-5 mx-auto">
+    <header className="h-screen w-screen flex flex-col md:flex-row-reverse justify-center items-center pt-20 md:pt-0 md:px-8 md:gap-12">
       <Image
         className="rounded-full shadow-[3px_3px_23px_3px_rgba(65,63,63,0.3)] w-[240px] h-[240px]
-    md:w-[360px] md:h-[360px]"
+    sm:w-[360px] sm:h-[360px]"
         src={profilePicture}
         width={360}
         height={360}
         alt="Me"
       />
-      <div className="md:m-[50px]">
+      <div className="p-8 md:w-4xl">
         <p className="text-pink-500 md:text-lg">Hi, my name is</p>
-        <div className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-3xl md:text-5xl font-bold md:mb-6">
           <h1 className="text-tertiary">Colin Bertin</h1>
           <span className="text-secondary">I am a Full Stack Developer.</span>
         </div>
-        <p className="text-lg text-tertiary mb-2 max-w-lg">
+        <p className="text-lg text-tertiary mb-2 md:max-w-[90%] mb-10">
           I bridge the gap between imagination and functionality, crafting
           responsive web experiences that come alive. I translate visionary
           ideas into user-friendly interfaces and robust back-end solutions,
@@ -51,6 +51,6 @@ export default function Banner() {
           />
         </Link>
       </div>
-    </div>
+    </header>
   );
 }
