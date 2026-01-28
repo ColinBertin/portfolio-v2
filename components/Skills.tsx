@@ -11,7 +11,7 @@ export default function Skills() {
 
   return (
     <SectionContainer id="skills" title="Skills">
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="mt-10 md:mt-0 grid grid-cols-1 md:grid-cols-3 gap-6">
         {Object.entries(skills).map(([category, skillList]) => (
           <SkillsCard key={category} title={category} skills={skillList} />
         ))}

@@ -26,7 +26,7 @@
 @theme {
   /* Dynamic CSS Variables (mapped from your existing var() setup) */
   --color-bg: var(--bg);
-  --color-text: var(--text);
+  /* --color-text: var(--text); */
   --color-primary: #fafafa;
   --color-primary-text: #fafafa;
   --color-secondary: #a8b0cb;
