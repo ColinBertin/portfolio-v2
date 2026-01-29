@@ -18,6 +18,7 @@ export default function ProjectCard({
   link,
   git,
 }: ProjectCardProps) {
+  console.log("hello")
   return (
     <div
       className="
