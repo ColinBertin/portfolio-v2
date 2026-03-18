@@ -3,7 +3,7 @@ import { Skill } from "@/types";
 export const skillList = (options: {
   theme: "light" | "dark";
 }): Record<string, Skill[]> => {
-  const { theme } = options;
+  void options;
 
   return {
     "Front-end": [
@@ -17,7 +17,7 @@ export const skillList = (options: {
         name: "Next.js",
         url: "https://nextjs.org",
         class: "devicon-nextjs-plain",
-        color: theme === "dark" ? "#fff" : "#101829",
+        color: "var(--primary)",
       },
       {
         name: "TypeScript",
@@ -49,7 +49,7 @@ export const skillList = (options: {
         name: "Express",
         url: "https://expressjs.com",
         class: "devicon-express-original",
-        color: theme === "dark" ? "#f5f5f5" : "#101829",
+        color: "var(--primary)",
       },
       {
         name: "Ruby",
@@ -96,7 +96,7 @@ export const skillList = (options: {
         name: "Vercel",
         url: "https://vercel.com/",
         class: "devicon-vercel-original",
-        color: theme === "dark" ? "#fff" : "#101829",
+        color: "var(--primary)",
       },
       {
         name: "Heroku",
