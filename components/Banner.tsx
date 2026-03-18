@@ -3,7 +3,6 @@
 import Image from "next/image";
 import profilePicture from "../public/images/profile_crop.png";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -28,8 +27,14 @@ export default function Banner() {
           ideas into user-friendly interfaces and robust back-end solutions,
           ensuring seamless experiences across all devices.
         </p>
-        <Link
+        <a
           href="#projects"
+          onClick={(e) => {
+            e.preventDefault();
+            document
+              .getElementById("projects")
+              ?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
           className="
     group
     hidden md:inline-flex
@@ -49,7 +54,7 @@ export default function Banner() {
       group-hover:rotate-90
     "
           />
-        </Link>
+        </a>
       </div>
     </header>
   );

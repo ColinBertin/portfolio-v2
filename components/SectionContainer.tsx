@@ -15,9 +15,10 @@ export default function SectionContainer({
       <h2
         className="inline-block
   text-2xl
-  md:text-3xl
+  md:text-4xl
   font-roboto
   text-tertiary
+  font-extrabold
   border-b-4 border-pink-500
   mb-2 md:mb-20
   pb-2"
