@@ -44,14 +44,17 @@ function detectBrowserLanguage(): Locale {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Locale>(() => {
-    if (typeof window === "undefined") return i18n.defaultLocale;
+  const [language, setLanguage] = useState<Locale>(i18n.defaultLocale);
+
+  useEffect(() => {
     const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
-    if (savedLanguage && isSupportedLanguage(savedLanguage)) {
-      return savedLanguage;
-    }
-    return detectBrowserLanguage();
-  });
+    const nextLanguage =
+      savedLanguage && isSupportedLanguage(savedLanguage)
+        ? savedLanguage
+        : detectBrowserLanguage();
+    const timeoutId = window.setTimeout(() => setLanguage(nextLanguage), 0);
+    return () => window.clearTimeout(timeoutId);
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = language;

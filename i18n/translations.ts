@@ -1,6 +1,6 @@
 export const i18n = {
   defaultLocale: "en",
-  locales: ["en", "fr", "ja"],
+  locales: ["en", "ja", "fr"],
 } as const;
 
 export type Locale = (typeof i18n)["locales"][number];
@@ -63,8 +63,8 @@ export const translations: Record<Locale, Translation> = {
   en: {
     languageNames: {
       en: "English",
-      fr: "Francais",
       ja: "Japanese",
+      fr: "French",
     },
     nav: {
       about: "About",
@@ -123,8 +123,8 @@ export const translations: Record<Locale, Translation> = {
   fr: {
     languageNames: {
       en: "Anglais",
-      fr: "Français",
       ja: "Japonais",
+      fr: "Français",
     },
     nav: {
       about: "À propos",
@@ -184,8 +184,8 @@ export const translations: Record<Locale, Translation> = {
   ja: {
     languageNames: {
       en: "英語",
-      fr: "フランス語",
       ja: "日本語",
+      fr: "フランス語",
     },
     nav: {
       about: "自己紹介",

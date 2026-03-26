@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
+        suppressHydrationWarning
         className={`${libreFranklin.variable} ${roboto.variable} antialiased`}
       >
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
