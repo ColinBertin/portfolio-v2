@@ -95,7 +95,7 @@ export default function Contact() {
       ) : null}
 
       <div className="mt-10 w-full max-w-2xl mx-auto">
-        <p className="text-tertiary text-lg mb-8">
+        <p className="text-secondary text-lg mb-8">
           Have a project in mind? Send me a message and I’ll get back to you.
         </p>
 

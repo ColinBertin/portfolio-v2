@@ -21,11 +21,11 @@ export default function Banner() {
           <h1 className="text-tertiary">Colin Bertin</h1>
           <span className="text-secondary">I am a Full Stack Developer.</span>
         </div>
-        <p className="text-lg text-tertiary mb-2 md:max-w-[90%] mb-10">
-          I bridge the gap between imagination and functionality, crafting
-          responsive web experiences that come alive. I translate visionary
-          ideas into user-friendly interfaces and robust back-end solutions,
-          ensuring seamless experiences across all devices.
+        <p className="text-lg text-secondary mb-2 md:max-w-[90%] mb-10">
+          I build responsive, production-ready web applications using
+          TypeScript, React, and Next.js. I focus on creating intuitive user
+          interfaces backed by reliable systems, translating complex ideas into
+          seamless, maintainable experiences.
         </p>
         <a
           href="#projects"

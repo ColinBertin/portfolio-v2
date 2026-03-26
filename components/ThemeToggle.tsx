@@ -22,6 +22,7 @@ export default function ThemeToggle() {
 
   return (
     <ToggleButton
+      className="cursor-pointer"
       isOn={currentTheme === "dark"}
       handleToggle={handleToggle}
       onIcon={<BsSun className="h-5 w-5" />}

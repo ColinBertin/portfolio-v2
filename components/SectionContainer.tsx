@@ -11,7 +11,7 @@ export default function SectionContainer({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="mb-10 md:mb-40 mx-5 md:mx-20 lg:mx-40 ">
+    <section id={id} className="scroll-mt-20 mb-10 md:mb-40 mx-5 md:mx-20 lg:mx-40 ">
       <h2
         className="inline-block
   text-2xl

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import SectionContainer from "./SectionContainer";
 
 export default function About() {
@@ -14,21 +13,34 @@ export default function About() {
           </h3>
 
           {/* Main text */}
-          <p className="text-tertiary md:max-w-[60%] m-4 md:m-0 text-lg">
-            I&apos;m a web developer based in Yokohama, Japan, with a passion
-            for crafting user-centric web experiences. Since 2018, I&apos;ve
-            honed my skills in building dynamic and responsive websites and
-            applications. I&apos;m a strong believer in the power of
-            collaboration and bring a positive and results-oriented attitude to
-            every project.
+          <p className="text-secondary md:max-w-[60%] m-4 md:m-0 text-lg">
+            I&apos;m a frontend-focused full-stack developer based in
+            Yokohama, Japan, passionate about building user-centric web
+            applications. Over the past few years, I&apos;ve developed and maintained
+            production-ready systems using TypeScript, React, and Next.js, with
+            a strong emphasis on performance, reliability, and clean
+            architecture. 
+            <br />
+            <br />
+            I enjoy translating complex ideas into intuitive,
+            responsive interfaces, and I thrive in collaborative environments
+            where thoughtful design and solid engineering come together to
+            deliver real value. Ready to bring your vision to life?
+            <br />
             <br />
             Ready to bring your vision to life?{" "}
-            <Link
-              className="border-b-2 border-pink-500 hover:text-pink-500 cursor-pointer"
+            <a
+              className="text-secondary border-b-2 border-pink-500 hover:text-pink-500 cursor-pointer"
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
             >
-              Contact me.
-            </Link>
+              Let’s connect.
+            </a>
           </p>
         </div>
       </div>
