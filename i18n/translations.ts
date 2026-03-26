@@ -228,7 +228,7 @@ export const translations: Record<Locale, Translation> = {
     },
     contact: {
       intro: "プロジェクトのご相談があれば、お気軽にメッセージをお送りください。",
-      nameLabel: "お名前",
+      nameLabel: "名前",
       emailLabel: "メール",
       messageLabel: "メッセージ",
       sending: "送信中...",
