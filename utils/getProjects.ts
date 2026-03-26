@@ -12,6 +12,12 @@ const django: ProjectTech = {
   color: "#22c55e",
 };
 
+const docker: ProjectTech = {
+  url: "https://www.docker.com/",
+  class: "devicon-docker-plain",
+  color: "#2496ED",
+};
+
 const typescript: ProjectTech = {
   url: "https://www.typescriptlang.org",
   class: "devicon-typescript-plain",
@@ -55,18 +61,13 @@ const supabase: ProjectTech = {
   color: "#3ECF8E",
 };
 
-
 export function getProjects(): Project[] {
   return [
     {
       name: "My Spending",
       description: "Manage your finances like a pro and generate your ledger",
       imageSrc: "/images/ms_1.png",
-      images: [
-        "/images/ms_1.png",
-        "/images/ms_2.png",
-        "/images/ms_3.png",
-      ],
+      images: ["/images/ms_1.png", "/images/ms_2.png", "/images/ms_3.png"],
       technologies: [supabase, next, typescript, tailwind],
       url: "https://my-spending-alpha.vercel.app/",
     },
@@ -74,7 +75,7 @@ export function getProjects(): Project[] {
       name: "Kanban",
       description: "Manage your tasks like a pro",
       imageSrc: "/images/kanban.png",
-      technologies: [django, next, typescript, tailwind],
+      technologies: [django, next, typescript, tailwind, docker],
       url: "https://kanban-ten-bay.vercel.app/",
     },
     {
