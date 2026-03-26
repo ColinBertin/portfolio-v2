@@ -1,7 +1,12 @@
+"use client";
+
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiWantedly } from "react-icons/si";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="px-4">
       <div
@@ -13,7 +18,7 @@ export default function Footer() {
         "
       >
         <p className="hidden text-sm sm:block">
-          © Colin Bertin JP 2026, All rights reserved.
+          {t.footer.copyright}
         </p>
 
         <ul className="flex items-center gap-3">

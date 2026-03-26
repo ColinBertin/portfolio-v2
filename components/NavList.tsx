@@ -2,6 +2,8 @@
 
 import Button from "./Button";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSelect from "./LanguageSelect";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function NavList({
   isOpen,
@@ -10,11 +12,13 @@ export default function NavList({
   isOpen: boolean;
   handleNavbar: () => void;
 }) {
+  const { t } = useLanguage();
+
   const navbarItems = [
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: t.nav.about, href: "#about" },
+    { name: t.nav.skills, href: "#skills" },
+    { name: t.nav.projects, href: "#projects" },
+    { name: t.nav.contact, href: "#contact" },
   ];
 
   return (
@@ -33,7 +37,10 @@ export default function NavList({
           <Button href={item.href} name={item.name} handleClick={handleNavbar} />
         </li>
       ))}
-      <ThemeToggle />
+      <li className="flex items-center gap-3">
+        <LanguageSelect />
+        <ThemeToggle />
+      </li>
     </ul>
   );
 }

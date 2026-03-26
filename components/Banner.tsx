@@ -3,8 +3,11 @@
 import Image from "next/image";
 import profilePicture from "../public/images/profile_crop.png";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Banner() {
+  const { t } = useLanguage();
+
   return (
     <header className="h-screen w-screen flex flex-col md:flex-row-reverse justify-center items-center pt-24 md:pt-0 md:px-8 md:gap-12 mb-10">
       <Image
@@ -16,16 +19,13 @@ export default function Banner() {
         alt="Me"
       />
       <div className="p-8 md:p-0 md:w-4xl">
-        <p className="text-pink-500 md:text-xl">Hi, my name is</p>
+        <p className="text-pink-500 md:text-xl">{t.banner.intro}</p>
         <div className="text-2xl md:text-5xl font-bold md:mb-6">
           <h1 className="text-tertiary">Colin Bertin</h1>
-          <span className="text-secondary">I am a Full Stack Developer.</span>
+          <span className="text-secondary">{t.banner.role}</span>
         </div>
         <p className="text-lg text-secondary mb-2 md:max-w-[90%] mb-10">
-          I build responsive, production-ready web applications using
-          TypeScript, React, and Next.js. I focus on creating intuitive user
-          interfaces backed by reliable systems, translating complex ideas into
-          seamless, maintainable experiences.
+          {t.banner.description}
         </p>
         <a
           href="#projects"
@@ -47,7 +47,7 @@ export default function Banner() {
     hover:bg-pink-500 hover:border-pink-500 hover:!text-white
   "
         >
-          View Work
+          {t.banner.cta}
           <HiArrowNarrowRight
             className="
       transition-transform duration-300

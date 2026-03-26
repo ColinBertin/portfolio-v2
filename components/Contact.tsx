@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import SectionContainer from "./SectionContainer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type SubmitStatus =
   | { state: "idle" }
@@ -14,6 +15,7 @@ type Toast =
   | { open: true; variant: "success" | "error"; message: string };
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -53,31 +55,31 @@ export default function Contact() {
         const errorMessage =
           typeof data === "object" && data !== null && "error" in data
             ? String((data as { error: unknown }).error)
-            : "Something went wrong. Please try again.";
+            : t.contact.unknownError;
         setStatus({ state: "error", message: errorMessage });
         showToast({ variant: "error", message: errorMessage });
         return;
       }
 
       setStatus({ state: "success" });
-      showToast({ variant: "success", message: "Ok! message received." });
+      showToast({ variant: "success", message: t.contact.successToast });
       setName("");
       setEmail("");
       setMessage("");
     } catch {
       setStatus({
         state: "error",
-        message: "Network error. Please try again.",
+        message: t.contact.networkError,
       });
       showToast({
         variant: "error",
-        message: "Not ok, network error. Please try again.",
+        message: t.contact.networkError,
       });
     }
   }
 
   return (
-    <SectionContainer id="contact" title="Contact">
+    <SectionContainer id="contact" title={t.sections.contact}>
       {toast.open ? (
         <div className="fixed left-1/2 top-20 z-50 w-[calc(100%-2rem)] max-w-md -translate-x-1/2">
           <div
@@ -96,7 +98,7 @@ export default function Contact() {
 
       <div className="mt-10 w-full max-w-2xl mx-auto">
         <p className="text-secondary text-lg mb-8">
-          Have a project in mind? Send me a message and I’ll get back to you.
+          {t.contact.intro}
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -105,7 +107,7 @@ export default function Contact() {
               htmlFor="contact-name"
               className="text-secondary font-semibold"
             >
-              Name
+              {t.contact.nameLabel}
             </label>
             <input
               id="contact-name"
@@ -126,7 +128,7 @@ export default function Contact() {
               htmlFor="contact-email"
               className="text-secondary font-semibold"
             >
-              Email
+              {t.contact.emailLabel}
             </label>
             <input
               id="contact-email"
@@ -147,7 +149,7 @@ export default function Contact() {
               htmlFor="contact-message"
               className="text-secondary font-semibold"
             >
-              Message
+              {t.contact.messageLabel}
             </label>
             <textarea
               id="contact-message"
@@ -181,7 +183,7 @@ export default function Contact() {
               disabled={!canSubmit}
               className="rounded-md bg-pink-500 px-5 py-3 font-semibold text-white transition-opacity disabled:opacity-50"
             >
-              {status.state === "sending" ? "Sending..." : "Let’s Collaborate"}
+              {status.state === "sending" ? t.contact.sending : t.contact.submit}
             </button>
           </div>
         </form>
