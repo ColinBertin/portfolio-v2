@@ -8,6 +8,18 @@ export const skillList = (options: {
   return {
     "Front-end": [
       {
+        name: "JavaScript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        class: "devicon-javascript-plain",
+        color: "#F7DF1E",
+      },
+      {
+        name: "TypeScript",
+        url: "https://www.typescriptlang.org",
+        class: "devicon-typescript-plain",
+        color: "#2f73bf",
+      },
+      {
         name: "React",
         url: "https://react.dev",
         class: "devicon-react-plain",
@@ -20,10 +32,14 @@ export const skillList = (options: {
         color: "var(--primary)",
       },
       {
-        name: "TypeScript",
-        url: "https://www.typescriptlang.org",
-        class: "devicon-typescript-plain",
-        color: "#2f73bf",
+        name: "Playwright",
+        url: "https://playwright.dev",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg",
+      },
+      {
+        name: "Vitest",
+        url: "https://vitest.dev",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitest/vitest-original.svg",
       },
       {
         name: "Tailwind CSS",
@@ -63,16 +79,21 @@ export const skillList = (options: {
         color: "#D4382E",
       },
       {
-        name: "Python",
-        url: "https://docs.python.org/3/",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        name: "RSpec",
+        url: "https://rspec.info",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rspec/rspec-original.svg",
       },
-      {
-        name: "Django",
-        url: "https://docs.djangoproject.com/en/5.1/",
-        class: "devicon-django-plain",
-        color: "#0b4b33",
-      },
+      // {
+      //   name: "Python",
+      //   url: "https://docs.python.org/3/",
+      //   src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      // },
+      // {
+      //   name: "Django",
+      //   url: "https://docs.djangoproject.com/en/5.1/",
+      //   class: "devicon-django-plain",
+      //   color: "#0b4b33",
+      // },
       {
         name: "PostgreSQL",
         url: "https://www.postgresql.org/",
@@ -91,6 +112,11 @@ export const skillList = (options: {
         url: "https://git-scm.com",
         class: "devicon-git-plain",
         color: "#f54d27",
+      },
+      {
+        name: "GitHub Actions",
+        url: "https://github.com/features/actions",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
       },
       {
         name: "Vercel",
