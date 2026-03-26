@@ -29,7 +29,7 @@ export default function NavList({
   `}
     >
       {navbarItems.map((item) => (
-        <li key={item.name} className="cursor uppercase text-2xl md:text-base">
+        <li key={item.name} className="cursor uppercase text-2xl md:text-base font-semibold">
           <Button href={item.href} name={item.name} handleClick={handleNavbar} />
         </li>
       ))}

@@ -8,12 +8,12 @@ export default function About() {
       <div className="mt-6 md:mt-10">
         <div className="flex flex-col md:flex-row">
           {/* Intro */}
-          <h3 className="text-xl md:text-3xl font-bold md:leading-[38px] text-secondary m-4 md:m-auto md:mr-10">
+          <h3 className="text-xl md:text-3xl font-bold md:leading-[38px] text-tertiary dark:text-secondary m-4 md:m-auto md:mr-10">
             Hi! I&apos;m Colin, nice to meet you. Please take a look around.
           </h3>
 
           {/* Main text */}
-          <p className="text-secondary md:max-w-[60%] m-4 md:m-0 text-lg">
+          <p className="text-tertiary dark:text-secondary md:max-w-[60%] m-4 md:m-0 text-lg">
             I&apos;m a frontend-focused full-stack developer based in
             Yokohama, Japan, passionate about building user-centric web
             applications. Over the past few years, I&apos;ve developed and maintained
@@ -30,7 +30,7 @@ export default function About() {
             <br />
             Ready to bring your vision to life?{" "}
             <a
-              className="text-secondary border-b-2 border-pink-500 hover:text-pink-500 cursor-pointer"
+              className="text-tertiary dark:text-secondary border-b-2 border-pink-500 hover:text-pink-500 cursor-pointer"
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();

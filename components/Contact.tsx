@@ -95,7 +95,7 @@ export default function Contact() {
       ) : null}
 
       <div className="mt-10 w-full max-w-2xl mx-auto">
-        <p className="text-secondary text-lg mb-8">
+        <p className="text-tertiary dark:text-secondary text-lg mb-8">
           Have a project in mind? Send me a message and I’ll get back to you.
         </p>
 
@@ -103,7 +103,7 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="contact-name"
-              className="text-secondary font-semibold"
+              className="text-tertiary dark:text-secondary font-semibold"
             >
               Name
             </label>
@@ -117,14 +117,14 @@ export default function Contact() {
               maxLength={60}
               required
               autoComplete="name"
-              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-secondary outline-none focus:border-pink-500"
+              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-tertiary dark:text-secondary outline-none focus:border-pink-500"
             />
           </div>
 
           <div className="flex flex-col gap-2">
             <label
               htmlFor="contact-email"
-              className="text-secondary font-semibold"
+              className="text-tertiary dark:text-secondary font-semibold"
             >
               Email
             </label>
@@ -138,14 +138,14 @@ export default function Contact() {
               maxLength={254}
               required
               autoComplete="email"
-              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-secondary outline-none focus:border-pink-500"
+              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-tertiary dark:text-secondary outline-none focus:border-pink-500"
             />
           </div>
 
           <div className="flex flex-col gap-2">
             <label
               htmlFor="contact-message"
-              className="text-secondary font-semibold"
+              className="text-tertiary dark:text-secondary font-semibold"
             >
               Message
             </label>
@@ -158,7 +158,7 @@ export default function Contact() {
               maxLength={2000}
               required
               rows={6}
-              className="w-full resize-y rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-secondary outline-none focus:border-pink-500"
+              className="w-full resize-y rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-tertiary dark:text-secondary outline-none focus:border-pink-500"
             />
           </div>
 

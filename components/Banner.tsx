@@ -19,9 +19,9 @@ export default function Banner() {
         <p className="text-pink-500 md:text-xl">Hi, my name is</p>
         <div className="text-2xl md:text-5xl font-bold md:mb-6">
           <h1 className="text-tertiary">Colin Bertin</h1>
-          <span className="text-secondary">I am a Full Stack Developer.</span>
+          <span className="text-tertiary dark:text-secondary">I am a Full Stack Developer.</span>
         </div>
-        <p className="text-lg text-secondary mb-2 md:max-w-[90%] mb-10">
+        <p className="text-lg text-tertiary dark:text-secondary mb-2 md:max-w-[90%] mb-10">
           I build responsive, production-ready web applications using
           TypeScript, React, and Next.js. I focus on creating intuitive user
           interfaces backed by reliable systems, translating complex ideas into
@@ -40,7 +40,7 @@ export default function Banner() {
     hidden md:inline-flex
     px-[15px] py-[10px]
     border border-secondary
-    text-[20px] text-secondary
+    text-[20px] text-tertiary dark:text-secondary
     cursor-pointer
     flex items-center gap-2
     transition-all duration-300

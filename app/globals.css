@@ -6,7 +6,7 @@
   --text: #697087;
 
   --primary: #101829;
-  --secondary: #1e1e1e;
+  --secondary: #697087;
   --tertiary: #a8b0cb;
 
   --accent: #a43560;
@@ -27,10 +27,10 @@
   /* Dynamic CSS Variables (mapped from your existing var() setup) */
   --color-bg: var(--bg);
   --color-text: var(--text);
-  --color-primary: #fafafa;
-  --color-primary-text: #fafafa;
-  --color-secondary: #a8b0cb;
-  --color-tertiary: #697087;
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
   --color-card: var(--card);
   --color-border: var(--border);
   --color-accent: var(--accent);
