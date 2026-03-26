@@ -42,7 +42,7 @@ export default function TopButton() {
         cursor-pointer
       "
     >
-      <IoIosArrowRoundUp />
+      <IoIosArrowRoundUp className="text-white" />
     </button>
   );
 }
