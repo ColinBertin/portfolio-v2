@@ -22,11 +22,11 @@ export default function ThemeToggle() {
 
   return (
     <ToggleButton
-      className="cursor-pointer"
+      className="cursor-pointer font-extrabold"
       isOn={currentTheme === "dark"}
       handleToggle={handleToggle}
-      onIcon={<BsSun className="h-5 w-5" />}
-      offIcon={<BsMoon className="h-5 w-5" />}
+      onIcon={<BsSun className="h-5 w-5 text-secondary" />}
+      offIcon={<BsMoon className="h-4 w-4 text-secondary" />}
     />
   );
 }

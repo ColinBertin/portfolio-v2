@@ -62,12 +62,6 @@ export const skillList = (options: {
     ],
     "Back-end": [
       {
-        name: "Express",
-        url: "https://expressjs.com",
-        class: "devicon-express-original",
-        color: "var(--primary)",
-      },
-      {
         name: "Ruby",
         url: "https://www.ruby-lang.org/en/",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg",
@@ -83,27 +77,33 @@ export const skillList = (options: {
         url: "https://rspec.info",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rspec/rspec-original.svg",
       },
-      // {
-      //   name: "Python",
-      //   url: "https://docs.python.org/3/",
-      //   src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-      // },
-      // {
-      //   name: "Django",
-      //   url: "https://docs.djangoproject.com/en/5.1/",
-      //   class: "devicon-django-plain",
-      //   color: "#0b4b33",
-      // },
-      {
-        name: "PostgreSQL",
-        url: "https://www.postgresql.org/",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-      },
       {
         name: "Node.js",
         url: "https://nodejs.org",
         class: "devicon-nodejs-plain",
         color: "#339933",
+      },
+      {
+        name: "Express",
+        url: "https://expressjs.com",
+        class: "devicon-express-original",
+        color: "var(--primary)",
+      },
+      {
+        name: "Python",
+        url: "https://docs.python.org/3/",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      },
+      {
+        name: "Django",
+        url: "https://docs.djangoproject.com/en/5.1/",
+        class: "devicon-django-plain",
+        color: "#0b4b33",
+      },
+      {
+        name: "PostgreSQL",
+        url: "https://www.postgresql.org/",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
       },
     ],
     Tools: [
