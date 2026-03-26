@@ -44,7 +44,7 @@ export default function Banner() {
     cursor-pointer
     flex items-center gap-2
     transition-all duration-300
-    hover:bg-pink-500 hover:border-pink-500 hover:text-primary
+    hover:bg-pink-500 hover:border-pink-500 hover:!text-white
   "
         >
           View Work

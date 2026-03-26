@@ -9,7 +9,7 @@
   --secondary: #1e1e1e;
   --tertiary: #a8b0cb;
 
-  /* --accent: #a43560; */
+  --accent: #a43560;
 }
 
 .dark {
@@ -91,6 +91,6 @@ a {
 }
 
 a:hover {
-  /* color: var(--pink); */
+  color: var(--accent);
 }
 

@@ -12,7 +12,7 @@ export default function SkillsCard({
 }) {
   return (
     <div className="border border-secondary h-80 rounded-2xl px-10 py-4 flex flex-col">
-      <h4 className="text-2xl font-semibold text-primary text-center">{title}</h4>
+      <h4 className="text-2xl font-semibold text-tertiary text-center">{title}</h4>
       <div className="mt-4 flex flex-col">
         {skills.map((skill) => (
           <a
@@ -38,7 +38,7 @@ export default function SkillsCard({
                 />
               )
             )}
-            <p className="text-secondary text-lg hover:text-primary transition-colors duration-300">{skill.name}</p>
+            <p className="text-secondary text-lg hover:text-[var(--primary)] transition-colors duration-300">{skill.name}</p>
           </a>
         ))}
       </div>
