@@ -5,10 +5,12 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import TopButton from "@/components/TopButton";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
+      <Navbar/>
       <Banner />
       <main>
         <About />
