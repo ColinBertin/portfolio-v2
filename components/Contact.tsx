@@ -105,7 +105,7 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="contact-name"
-              className="text-secondary font-semibold"
+              className="text-tertiary dark:text-secondary font-semibold"
             >
               {t.contact.nameLabel}
             </label>
@@ -119,14 +119,14 @@ export default function Contact() {
               maxLength={60}
               required
               autoComplete="name"
-              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-secondary outline-none focus:border-pink-500"
+              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-tertiary dark:text-secondary outline-none focus:border-pink-500"
             />
           </div>
 
           <div className="flex flex-col gap-2">
             <label
               htmlFor="contact-email"
-              className="text-secondary font-semibold"
+              className="text-tertiary dark:text-secondary font-semibold"
             >
               {t.contact.emailLabel}
             </label>
@@ -140,14 +140,14 @@ export default function Contact() {
               maxLength={254}
               required
               autoComplete="email"
-              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-secondary outline-none focus:border-pink-500"
+              className="w-full rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-tertiary dark:text-secondary outline-none focus:border-pink-500"
             />
           </div>
 
           <div className="flex flex-col gap-2">
             <label
               htmlFor="contact-message"
-              className="text-secondary font-semibold"
+              className="text-tertiary dark:text-secondary font-semibold"
             >
               {t.contact.messageLabel}
             </label>
@@ -160,7 +160,7 @@ export default function Contact() {
               maxLength={2000}
               required
               rows={6}
-              className="w-full resize-y rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-secondary outline-none focus:border-pink-500"
+              className="w-full resize-y rounded-md border border-tertiary/30 bg-bg px-4 py-3 text-tertiary dark:text-secondary outline-none focus:border-pink-500"
             />
           </div>
 

@@ -40,7 +40,7 @@ export default function SkillsCard({
                 />
               )
             )}
-            <p className="text-secondary text-lg leading-tight hover:text-[var(--primary)] transition-colors duration-300">
+            <p className="text-secondary text-lg font-semibold leading-tight hover:text-[var(--primary)] transition-colors duration-300">
               {skill.name}
             </p>
           </a>

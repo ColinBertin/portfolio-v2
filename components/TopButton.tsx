@@ -35,14 +35,14 @@ export default function TopButton() {
         bottom-[90px] right-[20px]
         sm:bottom-[100px] sm:right-[50px]
         p-2 rounded-full
-        bg-tertiary text-primary
+        bg-tertiary text-bg dark:text-primary
         text-[20px] sm:text-[32px]
         transition-colors duration-200
         hover:bg-pink-500
         cursor-pointer
       "
     >
-      <IoIosArrowRoundUp />
+      <IoIosArrowRoundUp className="text-white" />
     </button>
   );
 }

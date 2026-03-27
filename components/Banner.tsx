@@ -40,7 +40,7 @@ export default function Banner() {
     hidden md:inline-flex
     px-[15px] py-[10px]
     border border-secondary
-    text-[20px] text-secondary
+    text-[20px] text-tertiary dark:text-secondary
     cursor-pointer
     flex items-center gap-2
     transition-all duration-300

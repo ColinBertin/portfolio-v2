@@ -24,8 +24,7 @@ function ProjectCardBanner({
 }) {
   return (
     <div
-      className="flex flex-wrap items-center justify-between gap-2 border-t border-black/10 bg-[var(--secondary)]/15 px-3 py-2.5 dark:border-white/10"
-      style={{ color: "var(--primary)" }}
+      className="flex flex-wrap items-center justify-between gap-2 border-t border-black/10 bg-[var(--secondary)]/15 px-3 py-2.5 text-secondary dark:border-white/10"
     >
       <h2 className="min-w-0 truncate text-xl font-bold tracking-tight">{name}</h2>
       <div className="flex shrink-0 items-center gap-1.5">

@@ -23,7 +23,7 @@ export default function About() {
             {t.about.paragraphTwo}
             {" "}
             <a
-              className="text-secondary border-b-2 border-pink-500 hover:text-pink-500 cursor-pointer"
+              className="text-tertiary dark:text-secondary border-b-2 border-pink-500 hover:text-pink-500 cursor-pointer"
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();

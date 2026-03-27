@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { BsMoon, BsSun } from "react-icons/bs";
+import { FiSun, FiMoon } from "react-icons/fi";
 import ToggleButton from "./ToggleButton";
 
 export default function ThemeToggle() {
@@ -25,8 +25,8 @@ export default function ThemeToggle() {
       className="cursor-pointer font-extrabold"
       isOn={currentTheme === "dark"}
       handleToggle={handleToggle}
-      onIcon={<BsSun className="h-5 w-5 text-secondary" />}
-      offIcon={<BsMoon className="h-4 w-4 text-secondary" />}
+      onIcon={<FiSun className="h-5 w-5 text-secondary" />}
+      offIcon={<FiMoon className="h-5 w-5 text-secondary" />}
     />
   );
 }
