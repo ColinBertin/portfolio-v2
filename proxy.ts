@@ -2,6 +2,8 @@ import { match as matchLocale } from "@formatjs/intl-localematcher";
 import { NextResponse, type NextRequest } from "next/server";
 import { i18n, type Locale } from "@/i18n.config";
 
+const PUBLIC_FILE = /\.[^/]+$/;
+
 function getPreferredLocale(request: NextRequest): Locale {
   const acceptLanguage = request.headers.get("accept-language");
   if (!acceptLanguage) return i18n.defaultLocale;
@@ -24,6 +26,11 @@ function hasLocale(pathname: string) {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Skip locale redirects for static/public files like /images/foo.png.
+  if (PUBLIC_FILE.test(pathname)) {
+    return NextResponse.next();
+  }
 
   if (hasLocale(pathname)) {
     return NextResponse.next();
