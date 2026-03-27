@@ -5,11 +5,11 @@ import SectionContainer from "./SectionContainer";
 import { skillList } from "@/helpers";
 import SkillsCard from "./SkillsCard";
 import { useMemo } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useI18n } from "@/app/i18n-provider";
 
 export default function Skills() {
   const { resolvedTheme } = useTheme();
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
   const skills = useMemo(
     () => skillList({ theme: resolvedTheme === "dark" ? "dark" : "light" }),
     [resolvedTheme],

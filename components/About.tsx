@@ -1,10 +1,10 @@
 "use client";
 
 import SectionContainer from "./SectionContainer";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useI18n } from "@/app/i18n-provider";
 
 export default function About() {
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
 
   return (
     <SectionContainer id="about" title={t.about.title}>

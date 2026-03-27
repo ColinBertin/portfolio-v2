@@ -3,7 +3,7 @@
 import Button from "./Button";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelect from "./LanguageSelect";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useI18n } from "@/app/i18n-provider";
 
 export default function NavList({
   isOpen,
@@ -12,7 +12,7 @@ export default function NavList({
   isOpen: boolean;
   handleNavbar: () => void;
 }) {
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
 
   const navbarItems = [
     { name: t.nav.about, href: "#about" },

@@ -3,10 +3,10 @@
 import SectionContainer from "./SectionContainer";
 import { getProjects } from "@/utils/getProjects";
 import ProjectCard from "./ProjectCard";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useI18n } from "@/app/i18n-provider";
 
 export default function Projects() {
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
   const projects = getProjects();
 
   return (

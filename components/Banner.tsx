@@ -3,10 +3,10 @@
 import Image from "next/image";
 import profilePicture from "../public/images/profile_crop.png";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useI18n } from "@/app/i18n-provider";
 
 export default function Banner() {
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
 
   return (
     <header className="h-screen w-screen flex flex-col md:flex-row-reverse justify-center items-center pt-24 md:pt-0 md:px-8 md:gap-12 mb-10">

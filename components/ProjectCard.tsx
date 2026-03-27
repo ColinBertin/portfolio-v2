@@ -1,11 +1,11 @@
 "use client";
 
 import type { Project, ProjectTech } from "@/types";
+import { useI18n } from "@/app/i18n-provider";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { TbWorldWww } from "react-icons/tb";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 function ProjectCardBanner({
   name,
@@ -188,7 +188,7 @@ function TechStackOverlay({ technologies, stackLabel }: { technologies: ProjectT
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
   const slides = useMemo(() => {
     if (project.images?.length) return project.images;
     if (project.imageSrc) return [project.imageSrc];

@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Libre_Franklin, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import Navbar from "@/components/Navbar";
-import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const libreFranklin = Libre_Franklin({
   subsets: ["latin"],
@@ -35,12 +33,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${libreFranklin.variable} ${roboto.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
-          <LanguageProvider>
-            <Navbar />
-            {children}
-          </LanguageProvider>
-        </ThemeProvider>
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">{children}</ThemeProvider>
       </body>
     </html>
   );

@@ -2,10 +2,10 @@
 
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiWantedly } from "react-icons/si";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useI18n } from "@/app/i18n-provider";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
 
   return (
     <footer className="px-4">

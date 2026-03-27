@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import SectionContainer from "./SectionContainer";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useI18n } from "@/app/i18n-provider";
 
 type SubmitStatus =
   | { state: "idle" }
@@ -15,7 +15,7 @@ type Toast =
   | { open: true; variant: "success" | "error"; message: string };
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { dictionary: t } = useI18n();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
