@@ -1,12 +1,27 @@
 "use client";
 
 import type { Project, ProjectTech } from "@/types";
+import { useI18n } from "@/app/i18n-provider";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { TbWorldWww } from "react-icons/tb";
 
-function ProjectCardBanner({ name, git, url }: { name: string; git?: string; url: string }) {
+function ProjectCardBanner({
+  name,
+  git,
+  url,
+  githubAriaSuffix,
+  visitPrefix,
+  liveSiteTitle,
+}: {
+  name: string;
+  git?: string;
+  url: string;
+  githubAriaSuffix: string;
+  visitPrefix: string;
+  liveSiteTitle: string;
+}) {
   return (
     <div
       className="flex flex-wrap items-center justify-between gap-2 border-t border-black/10 bg-[var(--secondary)]/15 px-3 py-2.5 text-secondary dark:border-white/10"
@@ -18,7 +33,7 @@ function ProjectCardBanner({ name, git, url }: { name: string; git?: string; url
             href={git}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`${name} on GitHub`}
+            aria-label={`${name} ${githubAriaSuffix}`}
             title="GitHub"
           >
             <BsGithub className="h-6 w-6 transition-colors hover:text-pink-500" />
@@ -28,8 +43,8 @@ function ProjectCardBanner({ name, git, url }: { name: string; git?: string; url
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Visit ${name}`}
-          title="Live site"
+          aria-label={`${visitPrefix} ${name}`}
+          title={liveSiteTitle}
         >
           <TbWorldWww className="h-7 w-7 transition-colors hover:text-pink-500" />
         </a>
@@ -144,13 +159,15 @@ function ProjectImageCarousel({ slides, alt }: { slides: string[]; alt: string }
   );
 }
 
-function TechStackOverlay({ technologies }: { technologies: ProjectTech[] }) {
+function TechStackOverlay({ technologies, stackLabel }: { technologies: ProjectTech[]; stackLabel: string }) {
   return (
     <div
       className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-2 p-4 opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100"
     >
       <div className="absolute inset-0 bg-[var(--primary)]/75 backdrop-blur-[2px]" />
-      <p className="relative z-10 text-xs font-medium uppercase tracking-widest text-[var(--bg)]">Stack</p>
+      <p className="relative z-10 text-xs font-medium uppercase tracking-widest text-[var(--bg)]">
+        {stackLabel}
+      </p>
       <div className="relative z-10 flex flex-wrap items-center justify-center gap-3">
         {technologies.map((tech) => (
           <a
@@ -170,6 +187,7 @@ function TechStackOverlay({ technologies }: { technologies: ProjectTech[] }) {
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const { dictionary: t } = useI18n();
   const slides = useMemo(() => {
     if (project.images?.length) return project.images;
     if (project.imageSrc) return [project.imageSrc];
@@ -183,9 +201,16 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <div className="group relative aspect-[16/10] w-full overflow-hidden">
         <ProjectImageCarousel slides={slides} alt={project.name} />
-        <TechStackOverlay technologies={project.technologies} />
+        <TechStackOverlay technologies={project.technologies} stackLabel={t.projectCard.stack} />
       </div>
-      <ProjectCardBanner name={project.name} git={project.git} url={project.url} />
+      <ProjectCardBanner
+        name={project.name}
+        git={project.git}
+        url={project.url}
+        githubAriaSuffix={t.projectCard.onGithub}
+        visitPrefix={t.projectCard.visitProject}
+        liveSiteTitle={t.projectCard.liveSite}
+      />
     </article>
   );
 }

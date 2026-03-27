@@ -1,34 +1,27 @@
 "use client";
 
 import SectionContainer from "./SectionContainer";
+import { useI18n } from "@/app/i18n-provider";
 
 export default function About() {
+  const { dictionary: t } = useI18n();
+
   return (
-    <SectionContainer id="about" title="About Me">
+    <SectionContainer id="about" title={t.about.title}>
       <div className="mt-6 md:mt-10">
         <div className="flex flex-col md:flex-row">
           {/* Intro */}
-          <h3 className="text-xl md:text-3xl font-bold md:leading-[38px] text-tertiary dark:text-secondary m-4 md:m-auto md:mr-10">
-            Hi! I&apos;m Colin, nice to meet you. Please take a look around.
+          <h3 className="text-xl md:text-3xl font-bold md:leading-[38px] text-secondary m-4 md:m-auto md:mr-10">
+            {t.about.heading}
           </h3>
 
           {/* Main text */}
-          <p className="text-tertiary dark:text-secondary md:max-w-[60%] m-4 md:m-0 text-lg">
-            I&apos;m a frontend-focused full-stack developer based in
-            Yokohama, Japan, passionate about building user-centric web
-            applications. Over the past few years, I&apos;ve developed and maintained
-            production-ready systems using TypeScript, React, and Next.js, with
-            a strong emphasis on performance, reliability, and clean
-            architecture. 
+          <p className="text-secondary md:max-w-[60%] m-4 md:m-0 text-lg">
+            {t.about.paragraphOne}
             <br />
             <br />
-            I enjoy translating complex ideas into intuitive,
-            responsive interfaces, and I thrive in collaborative environments
-            where thoughtful design and solid engineering come together to
-            deliver real value. Ready to bring your vision to life?
-            <br />
-            <br />
-            Ready to bring your vision to life?{" "}
+            {t.about.paragraphTwo}
+            {" "}
             <a
               className="text-tertiary dark:text-secondary border-b-2 border-pink-500 hover:text-pink-500 cursor-pointer"
               href="#contact"
@@ -39,7 +32,7 @@ export default function About() {
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
             >
-              Let’s connect.
+              {t.about.connect}
             </a>
           </p>
         </div>
