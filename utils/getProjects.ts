@@ -70,6 +70,7 @@ export function getProjects(): Project[] {
       images: ["/images/ms_1.png", "/images/ms_2.png", "/images/ms_3.png"],
       technologies: [supabase, next, typescript, tailwind],
       url: "https://my-spending-alpha.vercel.app/",
+      git: "https://github.com/ColinBertin/my-spending"
     },
     {
       name: "Kanban",
