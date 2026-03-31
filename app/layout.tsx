@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Libre_Franklin, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/next"
 
 const libreFranklin = Libre_Franklin({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
           {children}
         </ThemeProvider>
+        <Analytics/>
       </body>
     </html>
   );
