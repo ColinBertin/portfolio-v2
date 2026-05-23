@@ -93,7 +93,7 @@ export function getProjects(): Project[] {
       git: "https://github.com/ColinBertin/entertainment_v2",
     },
     {
-      name: "My Blog Photographer",
+      name: "Photographer Portfolio",
       description: "Photographer portfolio",
       imageSrc: "/images/objectif-crea.png",
       images: [
