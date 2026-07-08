@@ -1,48 +1,56 @@
 import type { Project, ProjectTech } from "@/types";
 
 const express: ProjectTech = {
+  name: "Express",
   url: "https://expressjs.com",
   class: "devicon-express-original",
   color: "var(--primary)",
 };
 
 const django: ProjectTech = {
+  name: "Django",
   url: "https://www.djangoproject.com",
   class: "devicon-django-plain",
   color: "#22c55e",
 };
 
 const docker: ProjectTech = {
+  name: "Docker",
   url: "https://www.docker.com/",
   class: "devicon-docker-plain",
   color: "#2496ED",
 };
 
 const typescript: ProjectTech = {
+  name: "TypeScript",
   url: "https://www.typescriptlang.org",
   class: "devicon-typescript-plain",
   color: "#2f73bf",
 };
 
 const vercel: ProjectTech = {
+  name: "Vercel",
   url: "https://vercel.com",
   class: "devicon-vercel-original",
   color: "var(--primary)",
 };
 
 const css: ProjectTech = {
+  name: "CSS3",
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   class: "devicon-css3-plain-wordmark",
   color: "#3995CF",
 };
 
 const react: ProjectTech = {
+  name: "React",
   url: "https://react.dev",
   class: "devicon-react-plain",
   color: "#63DBFB",
 };
 
 const next: ProjectTech = {
+  name: "Next.js",
   url: "https://nextjs.org",
   class: "devicon-nextjs-plain-wordmark",
   color: "var(--primary)",
@@ -50,12 +58,14 @@ const next: ProjectTech = {
 };
 
 const tailwind: ProjectTech = {
+  name: "Tailwind CSS",
   url: "https://tailwindcss.com",
   class: "devicon-tailwindcss-plain",
   color: "#63DBFB",
 };
 
 const supabase: ProjectTech = {
+  name: "Supabase",
   url: "https://supabase.com",
   class: "devicon-supabase-plain",
   color: "#3ECF8E",
@@ -68,7 +78,7 @@ export function getProjects(): Project[] {
       description: "Manage your finances like a pro and generate your ledger",
       imageSrc: "/images/ms_1.png",
       images: ["/images/ms_1.png", "/images/ms_2.png", "/images/ms_3.png"],
-      technologies: [supabase, next, typescript, tailwind],
+      technologies: [next, typescript, tailwind, supabase],
       url: "https://my-spending-alpha.vercel.app/",
       git: "https://github.com/ColinBertin/my-spending"
     },

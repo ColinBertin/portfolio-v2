@@ -175,10 +175,15 @@ function TechStackOverlay({ technologies, stackLabel }: { technologies: ProjectT
             href={tech.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`pointer-events-auto flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--bg)]/95 shadow-md transition-transform hover:scale-110 ${tech.linkClass ?? ""}`}
-            title={tech.url}
+            className={`group/tech pointer-events-auto relative flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--bg)]/95 shadow-md transition-transform hover:scale-110 ${tech.linkClass ?? ""}`}
           >
             <i className={`${tech.class} text-2xl`} style={{ color: tech.color }} />
+            <span
+              role="tooltip"
+              className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-[var(--primary)] px-2 py-1 text-xs font-medium text-[var(--bg)] opacity-0 shadow-md transition-opacity duration-150 group-hover/tech:opacity-100"
+            >
+              {tech.name}
+            </span>
           </a>
         ))}
       </div>

@@ -7,6 +7,7 @@ export type Skill = {
 };
 
 export type ProjectTech = {
+  name: string;
   url: string;
   class: string;
   color: string;
