@@ -105,6 +105,12 @@ export const skillList = (options: {
         url: "https://www.postgresql.org/",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
       },
+      {
+        name: "Supabase",
+        url: "https://supabase.com",
+        class: "devicon-supabase-plain",
+        color: "#3ECF8E",
+      },
     ],
     Tools: [
       {
