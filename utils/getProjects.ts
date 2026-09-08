@@ -35,12 +35,12 @@ const vercel: ProjectTech = {
   color: "var(--primary)",
 };
 
-const css: ProjectTech = {
-  name: "CSS3",
-  url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  class: "devicon-css3-plain-wordmark",
-  color: "#3995CF",
-};
+// const css: ProjectTech = {
+//   name: "CSS3",
+//   url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+//   class: "devicon-css3-plain-wordmark",
+//   color: "#3995CF",
+// };
 
 const react: ProjectTech = {
   name: "React",
@@ -116,22 +116,22 @@ export function getProjects(): Project[] {
       url: "https://objectif-crea.vercel.app/",
       git: "https://github.com/ColinBertin/objectif-crea",
     },
-    {
-      name: "Countries infos",
-      description: "Get information about country",
-      imageSrc: "/images/countries.webp",
-      images: ["/images/countries.webp", "/images/countries_1.png"],
-      technologies: [react, css],
-      url: "https://colinbertin.github.io/countries-flags-infos/",
-      git: "https://github.com/ColinBertin/countries-flags-infos",
-    },
-    {
-      name: "Weather Forecast",
-      description: "Simple Weather app",
-      imageSrc: "/images/weather-min.png",
-      technologies: [next, tailwind, vercel],
-      url: "https://weather-app-kappa-livid.vercel.app",
-      git: "https://github.com/ColinBertin/weather-app",
-    },
+    // {
+    //   name: "Countries infos",
+    //   description: "Get information about country",
+    //   imageSrc: "/images/countries.webp",
+    //   images: ["/images/countries.webp", "/images/countries_1.png"],
+    //   technologies: [react, css],
+    //   url: "https://colinbertin.github.io/countries-flags-infos/",
+    //   git: "https://github.com/ColinBertin/countries-flags-infos",
+    // },
+    // {
+    //   name: "Weather Forecast",
+    //   description: "Simple Weather app",
+    //   imageSrc: "/images/weather-min.png",
+    //   technologies: [next, tailwind, vercel],
+    //   url: "https://weather-app-kappa-livid.vercel.app",
+    //   git: "https://github.com/ColinBertin/weather-app",
+    // },
   ];
 }
